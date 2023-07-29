@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="Main">
+    <file>home_1946488.png</file>
+  </qresource>
+  <qresource prefix="Button">
+    <file>right-arrow_664866.png</file>
+    <file>checked_709510.png</file>
+  </qresource>
+</RCC>
