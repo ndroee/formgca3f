@@ -1,4 +1,5 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
+import pandas as pd
 
 
 class Ui_FormGca3F(object):
@@ -393,12 +394,36 @@ class Ui_FormGca3F(object):
         self.rbCK.setText(_translate("FormGca3F", "Cokelat Kekuningan"))
         self.rbC.setText(_translate("FormGca3F", "Kecokelatan"))
 
+        self.btnUpload.clicked.connect(self.on_btnUpload_clicked)
+
+    def on_btnUpload_clicked(self):
+            # Membuka jendela dialog untuk memilih file Excel
+            filePath, _ = QtWidgets.QFileDialog.getOpenFileName(None, "Unggah File Excel", "",
+                                                                "Excel Files (*.xls *.xlsx);;All Files (*)")
+
+            # Memeriksa apakah file Excel dipilih atau tidak
+            if filePath:
+                # Membaca data dari file Excel menggunakan pandas
+                try:
+                    data = pd.read_excel(filePath)
+                except Exception as e:
+                    QtWidgets.QMessageBox.critical(None, "Error", f"Gagal membaca file Excel:\n{str(e)}")
+                    return
+
+                # Mengisi form di groupBox "Informasi Sampel" dengan data dari file Excel
+                if not data.empty:
+                    self.txtAsal.setText(str(data.iloc[0]['Asal Conto']))
+                    self.txtLok.setText(str(data.iloc[0]['Lokasi']))
+                    self.txtSiteID.setText(str(data.iloc[0]['Site ID']))
+                    self.txtLapis.setText(str(data.iloc[0]['Lapis']))
+                    self.txtBulan.setText(str(data.iloc[0]['Bulan/Tahun']))
+                    self.txtBrtTbg.setText(str(data.iloc[0]['Berat Timbang']))
 
 if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    FormGca3F = QtWidgets.QWidget()
-    ui = Ui_FormGca3F()
-    ui.setupUi(FormGca3F)
-    FormGca3F.show()
-    sys.exit(app.exec())
+        import sys
+        app = QtWidgets.QApplication(sys.argv)
+        FormGca3F = QtWidgets.QWidget()
+        ui = Ui_FormGca3F()
+        ui.setupUi(FormGca3F)
+        FormGca3F.show()
+        sys.exit(app.exec())

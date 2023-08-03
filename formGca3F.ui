@@ -21,9 +21,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>80</y>
-     <width>321</width>
-     <height>201</height>
+     <y>70</y>
+     <width>341</width>
+     <height>251</height>
     </rect>
    </property>
    <property name="title">
@@ -31,7 +31,11 @@
    </property>
    <layout class="QFormLayout" name="formLayout">
     <item row="0" column="1">
-     <widget class="QLineEdit" name="txtAsal"/>
+     <widget class="QLineEdit" name="txtAsal">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="label_2">
@@ -41,7 +45,11 @@
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="txtLok"/>
+     <widget class="QLineEdit" name="txtLok">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="label_3">
@@ -51,7 +59,11 @@
      </widget>
     </item>
     <item row="2" column="1">
-     <widget class="QLineEdit" name="txtSiteID"/>
+     <widget class="QLineEdit" name="txtSiteID">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="label_4">
@@ -61,7 +73,11 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="txtLapis"/>
+     <widget class="QLineEdit" name="txtLapis">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="4" column="0">
      <widget class="QLabel" name="label_5">
@@ -71,7 +87,11 @@
      </widget>
     </item>
     <item row="4" column="1">
-     <widget class="QLineEdit" name="txtBulan"/>
+     <widget class="QLineEdit" name="txtBulan">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="5" column="0">
      <widget class="QLabel" name="label_6">
@@ -81,7 +101,11 @@
      </widget>
     </item>
     <item row="5" column="1">
-     <widget class="QLineEdit" name="txtBrtTbg"/>
+     <widget class="QLineEdit" name="txtBrtTbg">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
     <item row="0" column="0">
      <widget class="QLabel" name="label">
@@ -93,6 +117,20 @@
       </property>
      </widget>
     </item>
+    <item row="6" column="0">
+     <widget class="QPushButton" name="btnPrev">
+      <property name="text">
+       <string>Prev</string>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="1">
+     <widget class="QPushButton" name="btnNext">
+      <property name="text">
+       <string>Next</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QGroupBox" name="groupBox_2">
@@ -101,7 +139,7 @@
      <x>370</x>
      <y>140</y>
      <width>243</width>
-     <height>141</height>
+     <height>181</height>
     </rect>
    </property>
    <property name="title">
@@ -146,26 +184,13 @@
      </widget>
     </item>
     <item row="3" column="1">
-     <widget class="QLineEdit" name="txtTotBrt"/>
+     <widget class="QLineEdit" name="txtTotBrt">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+     </widget>
     </item>
    </layout>
-  </widget>
-  <widget class="QPushButton" name="btnOk">
-   <property name="geometry">
-    <rect>
-     <x>450</x>
-     <y>290</y>
-     <width>80</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset resource="Icons/right-arrow_664866.qrc">
-     <normaloff>:/Button/right-arrow_664866.png</normaloff>:/Button/right-arrow_664866.png</iconset>
-   </property>
   </widget>
   <widget class="QPushButton" name="btnUpload">
    <property name="geometry">
@@ -186,7 +211,7 @@
      <x>10</x>
      <y>320</y>
      <width>321</width>
-     <height>281</height>
+     <height>341</height>
     </rect>
    </property>
    <property name="title">
@@ -198,7 +223,7 @@
       <x>15</x>
       <y>59</y>
       <width>291</width>
-      <height>206</height>
+      <height>271</height>
      </rect>
     </property>
     <property name="widgetResizable">
@@ -208,9 +233,9 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>-183</y>
+       <y>0</y>
        <width>274</width>
-       <height>698</height>
+       <height>708</height>
       </rect>
      </property>
      <layout class="QFormLayout" name="formLayout_5">
@@ -232,101 +257,101 @@
       <item row="2" column="1">
        <widget class="QLineEdit" name="leM03"/>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QComboBox" name="cbM4"/>
       </item>
-      <item row="3" column="1">
+      <item row="4" column="1">
        <widget class="QLineEdit" name="leM04"/>
       </item>
-      <item row="4" column="0">
+      <item row="5" column="0">
        <widget class="QComboBox" name="cbM5"/>
       </item>
-      <item row="4" column="1">
+      <item row="5" column="1">
        <widget class="QLineEdit" name="leM05"/>
       </item>
-      <item row="5" column="0">
-       <widget class="QComboBox" name="cbM6"/>
-      </item>
-      <item row="5" column="1">
+      <item row="6" column="1">
        <widget class="QLineEdit" name="leM06"/>
       </item>
-      <item row="6" column="0">
+      <item row="7" column="0">
        <widget class="QComboBox" name="cbM7"/>
       </item>
-      <item row="6" column="1">
+      <item row="7" column="1">
        <widget class="QLineEdit" name="leM07"/>
       </item>
-      <item row="7" column="1">
-       <widget class="QLineEdit" name="leM08"/>
-      </item>
-      <item row="7" column="0">
+      <item row="8" column="0">
        <widget class="QComboBox" name="cbM8"/>
       </item>
-      <item row="9" column="1">
-       <widget class="QLineEdit" name="leM10"/>
+      <item row="8" column="1">
+       <widget class="QLineEdit" name="leM08"/>
       </item>
       <item row="9" column="0">
+       <widget class="QComboBox" name="cbM9"/>
+      </item>
+      <item row="9" column="1">
+       <widget class="QLineEdit" name="leM09"/>
+      </item>
+      <item row="10" column="0">
        <widget class="QComboBox" name="cbM10"/>
       </item>
       <item row="10" column="1">
-       <widget class="QLineEdit" name="leM11"/>
+       <widget class="QLineEdit" name="leM10"/>
       </item>
-      <item row="10" column="0">
+      <item row="11" column="0">
        <widget class="QComboBox" name="cbM11"/>
       </item>
       <item row="11" column="1">
-       <widget class="QLineEdit" name="leM12"/>
-      </item>
-      <item row="12" column="1">
-       <widget class="QLineEdit" name="leM13"/>
+       <widget class="QLineEdit" name="leM11"/>
       </item>
       <item row="12" column="0">
-       <widget class="QComboBox" name="cbM13"/>
-      </item>
-      <item row="11" column="0">
        <widget class="QComboBox" name="cbM12"/>
       </item>
-      <item row="8" column="0">
-       <widget class="QComboBox" name="cbM9"/>
-      </item>
-      <item row="8" column="1">
-       <widget class="QLineEdit" name="leM09"/>
+      <item row="12" column="1">
+       <widget class="QLineEdit" name="leM12"/>
       </item>
       <item row="13" column="0">
-       <widget class="QComboBox" name="cbM14"/>
+       <widget class="QComboBox" name="cbM13"/>
       </item>
       <item row="13" column="1">
-       <widget class="QLineEdit" name="leM14"/>
-      </item>
-      <item row="14" column="1">
-       <widget class="QLineEdit" name="leM15"/>
+       <widget class="QLineEdit" name="leM13"/>
       </item>
       <item row="14" column="0">
-       <widget class="QComboBox" name="cbM15"/>
+       <widget class="QComboBox" name="cbM14"/>
+      </item>
+      <item row="14" column="1">
+       <widget class="QLineEdit" name="leM14"/>
       </item>
       <item row="15" column="0">
-       <widget class="QComboBox" name="cbM16"/>
+       <widget class="QComboBox" name="cbM15"/>
       </item>
       <item row="15" column="1">
-       <widget class="QLineEdit" name="leM16"/>
+       <widget class="QLineEdit" name="leM15"/>
       </item>
       <item row="16" column="0">
-       <widget class="QComboBox" name="cbM17"/>
+       <widget class="QComboBox" name="cbM16"/>
       </item>
       <item row="16" column="1">
-       <widget class="QLineEdit" name="leM17"/>
+       <widget class="QLineEdit" name="leM16"/>
       </item>
       <item row="17" column="0">
-       <widget class="QComboBox" name="cbM18"/>
+       <widget class="QComboBox" name="cbM17"/>
       </item>
       <item row="17" column="1">
-       <widget class="QLineEdit" name="leM18"/>
+       <widget class="QLineEdit" name="leM17"/>
       </item>
       <item row="18" column="0">
-       <widget class="QComboBox" name="cbM19"/>
+       <widget class="QComboBox" name="cbM18"/>
       </item>
       <item row="18" column="1">
+       <widget class="QLineEdit" name="leM18"/>
+      </item>
+      <item row="19" column="0">
+       <widget class="QComboBox" name="cbM19"/>
+      </item>
+      <item row="19" column="1">
        <widget class="QLineEdit" name="leM19"/>
+      </item>
+      <item row="6" column="0">
+       <widget class="QComboBox" name="cbM6"/>
       </item>
      </layout>
     </widget>
@@ -364,7 +389,7 @@
      <x>370</x>
      <y>320</y>
      <width>350</width>
-     <height>281</height>
+     <height>341</height>
     </rect>
    </property>
    <property name="title">
@@ -457,6 +482,13 @@
         </widget>
        </item>
       </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btnOk">
+      <property name="text">
+       <string>OK</string>
+      </property>
      </widget>
     </item>
    </layout>
